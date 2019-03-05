@@ -57,11 +57,21 @@ def make_scale( x, y, z ):
 
 #Quite confusing
 def make_rotX( theta ):
-    pass
+    ans = new_matrix()
+    ident(ans)
+    ans[1][1] = math.cos(math.radians(theta))
+    ans[2][2] = math.cos(math.radians(theta))
+    ans[1][2] = math.sin(math.radians(theta))
+    ans[2][1] = -1 * math.sin(math.radians(theta))
+    return ans
 
 def make_rotY( theta ):
     ans = new_matrix()
     ident(ans)
+    ans[0][0] = math.cos(math.radians(theta))
+    ans[2][0] = math.sin(math.radians(theta))
+    ans[0][2] = -1 * math.sin(math.radians(theta))
+    ans[2][2] = math.cos(math.radians(theta))
     return ans
 
 def make_rotZ( theta ):
@@ -72,7 +82,7 @@ def make_rotZ( theta ):
     ans[0][1] = math.sin(math.radians(theta))
     ans[1][0] = -1*math.sin(math.radians(theta))
     return ans
-print_matrix(make_rotZ(60))
+#print_matrix(make_rotZ(60))
 #print the matrix such that it looks like
 #the template in the top comment
 

@@ -67,10 +67,10 @@ def make_rotY( theta ):
 def make_rotZ( theta ):
     ans = new_matrix()
     ident(ans)
-    ans[0][0] = cos(math.radians(theta))
-    ans[1][1] = cos(math.radians(theta))
-    ans[0][1] = sin(math.radians(theta))
-    ans[1][0] = -sin(math.radians(theta))
+    ans[0][0] = math.cos(math.radians(theta))
+    ans[1][1] = math.cos(math.radians(theta))
+    ans[0][1] = math.sin(math.radians(theta))
+    ans[1][0] = -1*math.sin(math.radians(theta))
     return ans
 print_matrix(make_rotZ(60))
 #print the matrix such that it looks like

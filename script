@@ -1,0 +1,34 @@
+line 
+0 0 0 150 0 0 
+line
+250 124 120 0 0 0 
+line
+70 90 85 250 124 120 
+line 
+70 90 85 150 0 0 
+display
+ident
+scale
+3 1 4
+apply 
+display
+ident
+translate
+60 50 85
+apply
+display
+ident
+rotate 
+x 45
+apply 
+display
+rotate
+y 45
+apply 
+display
+rotate
+z 45
+apply
+display
+save
+pic.png
